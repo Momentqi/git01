@@ -34,12 +34,9 @@ Vue.use(VueLazyload,{
   loading:require('./assets/img/common/placeholder.jpg')
 });
 
-// Vue.prototype.$bus = new Vue()
+Vue.prototype.$bus = new Vue()
 new Vue({
   render: h => h(App),
   router,
   store,
-  beforeCreate() {
-    Vue.prototype.$bus = this
-  }
 }).$mount('#app')
